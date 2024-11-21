@@ -1,0 +1,245 @@
+:root {
+    --color-primary: #7c3637; /* Vermelho vinho */
+    --color-secondary: #c39ea4; /* Rosa claro suave */
+    --color-accent: #a36c74; /* Rosa queimado */
+    --color-background: #fefefe; /* Branco */
+    --color-highlight: #e4d3d6; /* Rosa pálido */
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: 'Playfair Display', 'Georgia', serif; /* Fonte elegante sugerida */
+    margin: 0;
+    
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    font-family: 'Dancing Script', cursive; /* Para um toque manuscrito */
+    padding: 2px;
+}
+
+h4{
+    color:#fefefe;
+    background-color: #7c3637;
+    text-align: center;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+#t1 {
+    display: block; /* Altera a imagem para elemento de bloco */
+    border-radius: 50%; /* Torna a imagem redonda */
+    border: 3px solid var(--color-primary); /* Adiciona uma borda */
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-accent); /* Rosa queimado */
+    color: var(--color-background); /* Branco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espaço entre a logo e o texto */
+}
+
+.hero #principal {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+/* Tornar h1 e h2 brancos apenas no .hero */
+.hero h1, 
+.hero h2 {
+    color: var(--color-background); /* Branco */
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.image-gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-highlight); /* Fundo do quadro */
+    border: 5px solid var(--color-primary); /* Borda ao redor do quadro */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px; /* Largura máxima do quadro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra do quadro */
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas responsivas */
+    gap: 15px; /* Espaço entre as imagens */
+    width: 100%; /* O grid ocupa todo o bloco */
+}
+
+.image-gallery img {
+    width: 100%; /* A imagem ocupa toda a célula */
+    height: auto;
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    border: 2px solid var(--color-primary); /* Cor da borda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave nas imagens */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transition: transform 0.3s ease;
+}
+
+/* Título centralizado dentro do bloco */
+.image-gallery-section h1 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    font-family: 'Playfair Display', serif;
+}
+
+nav {
+    background-color: #7c3637; /* Vermelho vinho */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c39ea4; /* Rosa claro suave */
+}
+
+/* Mantém o estilo existente do menu */
+nav {
+    background-color: var(--color-primary); /* Vermelho vinho */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary); /* Rosa claro suave */
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Esconde o menu por padrão */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-primary);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Estilo dos itens no menu dropdown */
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Exibe o botão hambúrguer */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Exibe o menu quando ativo */
+    nav.active ul {
+        display: flex;
+    }
+}
+
+
+iframe { 
+    width: 60%;  /* Ou qualquer valor que você achar adequado */
+    height: 300px; /* Ajuste conforme necessário */
+    display: block; /* Faz com que o iframe seja tratado como um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border: none; /* Remover borda se necessário */
+}
