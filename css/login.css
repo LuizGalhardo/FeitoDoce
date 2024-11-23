@@ -1,0 +1,160 @@
+/* Variáveis de Cores */
+:root {
+  --color-primary: #7c3637; /* Vermelho vinho */
+  --color-secondary: #c39ea4; /* Rosa claro suave */
+  --color-background: #fefefe; /* Branco */
+  --color-accent: #a36c74; /* Rosa queimado */
+  --color-highlight: #e4d3d6; /* Rosa pálido */
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: var(--color-background);
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  text-align: center; /* Garante que o texto seja centralizado */
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px; /* Limita a largura do card */
+  padding: 20px;
+  background-color: var(--color-highlight);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px; /* Ajuste conforme o tamanho da sua logo */
+  height: 100px;
+  border-radius: 50%; /* Faz a logo ficar arredondada */
+  object-fit: cover; /* Garante que a imagem não distorça */
+}
+
+.login-form h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os campos */
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+}
+
+.input-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: var(--color-accent);
+}
+
+.btn-submit {
+  padding: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Faz com que o botão ocupe toda a largura disponível */
+  display: block;
+  margin: 0 auto; /* Centraliza o botão */
+}
+
+.btn-submit:hover {
+  background-color: var(--color-accent);
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%; /* Ajusta o tamanho para dispositivos menores */
+    padding: 15px;
+  }
+
+  .login-form h2 {
+    font-size: 1.6rem;
+  }
+
+  .input-group input {
+    font-size: 1rem;
+  }
+
+  .btn-submit {
+    font-size: 1rem;
+  }
+
+  .signup-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 95%; /* Aumenta a largura para dispositivos muito pequenos */
+    padding: 10px;
+  }
+
+  .login-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .input-group input {
+    font-size: 0.95rem;
+  }
+
+  .btn-submit {
+    font-size: 1rem;
+  }
+
+  .signup-link {
+    font-size: 0.8rem;
+  }
+}

@@ -1,245 +1,363 @@
 :root {
-    --color-primary: #7c3637; /* Vermelho vinho */
-    --color-secondary: #c39ea4; /* Rosa claro suave */
-    --color-accent: #a36c74; /* Rosa queimado */
-    --color-background: #fefefe; /* Branco */
-    --color-highlight: #e4d3d6; /* Rosa pálido */
+  --color-primary: #7c3637; /* Vermelho vinho */
+  --color-secondary: #c39ea4; /* Rosa claro suave */
+  --color-accent: #a36c74; /* Rosa queimado */
+  --color-background: #fefefe; /* Branco */
+  --color-highlight: #e4d3d6; /* Rosa pálido */
+}
+
+h2 {
+  color: var(--color-primary);
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 body {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    font-family: 'Playfair Display', 'Georgia', serif; /* Fonte elegante sugerida */
-    margin: 0;
-    
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: "Playfair Display", "Georgia", serif; /* Fonte elegante sugerida */
+  margin: 0;
 }
 
-h1, h2, h3 {
-    color: var(--color-primary);
-    font-family: 'Dancing Script', cursive; /* Para um toque manuscrito */
-    padding: 2px;
+h1,
+h2,
+h3 {
+  color: var(--color-primary);
+  font-family: "Dancing Script", cursive; /* Para um toque manuscrito */
+  padding: 2px;
 }
 
-h4{
-    color:#fefefe;
-    background-color: #7c3637;
-    text-align: center;
+h4 {
+  color: #fefefe;
+  background-color: #7c3637;
+  text-align: center;
 }
 
 a {
-    color: var(--color-secondary);
-    text-decoration: none;
+  color: var(--color-secondary);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 #t1 {
-    display: block; /* Altera a imagem para elemento de bloco */
-    border-radius: 50%; /* Torna a imagem redonda */
-    border: 3px solid var(--color-primary); /* Adiciona uma borda */
+  display: block; /* Altera a imagem para elemento de bloco */
+  border-radius: 50%; /* Torna a imagem redonda */
+  border: 3px solid var(--color-primary); /* Adiciona uma borda */
 }
 
 /* Hero Section */
 .hero {
-    background-color: var(--color-accent); /* Rosa queimado */
-    color: var(--color-background); /* Branco */
-    padding: 20px 0;
-    text-align: center;
+  background-color: var(--color-accent); /* Rosa queimado */
+  color: var(--color-background); /* Branco */
+  padding: 20px 0;
+  text-align: center;
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Espaço entre a logo e o texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espaço entre a logo e o texto */
 }
 
 .hero #principal {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
 }
 
 /* Tornar h1 e h2 brancos apenas no .hero */
-.hero h1, 
+.hero h1,
 .hero h2 {
-    color: var(--color-background); /* Branco */
+  color: var(--color-background); /* Branco */
 }
 
 .hero h2 {
-    font-size: 1.2rem;
-    margin-top: 5px;
+  font-size: 1.2rem;
+  margin-top: 5px;
 }
 
 .image-gallery-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-highlight); /* Fundo do quadro */
-    border: 5px solid var(--color-primary); /* Borda ao redor do quadro */
-    border-radius: 15px; /* Bordas arredondadas */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px; /* Largura máxima do quadro */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra do quadro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-highlight); /* Fundo do quadro */
+  border: 5px solid var(--color-primary); /* Borda ao redor do quadro */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px; /* Largura máxima do quadro */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra do quadro */
 }
 
 .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas responsivas */
-    gap: 15px; /* Espaço entre as imagens */
-    width: 100%; /* O grid ocupa todo o bloco */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Colunas responsivas */
+  gap: 15px; /* Espaço entre as imagens */
+  width: 100%; /* O grid ocupa todo o bloco */
 }
 
 .image-gallery img {
-    width: 100%; /* A imagem ocupa toda a célula */
-    height: auto;
-    border-radius: 8px; /* Borda arredondada nas imagens */
-    border: 2px solid var(--color-primary); /* Cor da borda */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave nas imagens */
+  width: 100%; /* A imagem ocupa toda a célula */
+  height: auto;
+  border-radius: 8px; /* Borda arredondada nas imagens */
+  border: 2px solid var(--color-primary); /* Cor da borda */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave nas imagens */
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    transition: transform 0.3s ease;
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  transition: transform 0.3s ease;
 }
 
 /* Título centralizado dentro do bloco */
 .image-gallery-section h1 {
-    margin-bottom: 20px;
-    color: var(--color-primary);
-    font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-family: "Playfair Display", serif;
 }
 
 nav {
-    background-color: #7c3637; /* Vermelho vinho */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #7c3637; /* Vermelho vinho */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav .logo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
 nav ul li {
-    display: inline;
+  display: inline;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    transition: color 0.3s;
+  color: white;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #c39ea4; /* Rosa claro suave */
+  color: #c39ea4; /* Rosa claro suave */
 }
 
 /* Mantém o estilo existente do menu */
 nav {
-    background-color: var(--color-primary); /* Vermelho vinho */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: var(--color-primary); /* Vermelho vinho */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav .logo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    transition: color 0.3s;
+  color: white;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--color-secondary); /* Rosa claro suave */
+  color: var(--color-secondary); /* Rosa claro suave */
 }
 
 /* Botão hambúrguer */
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    /* Esconde o menu por padrão */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: var(--color-primary);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
+  /* Esconde o menu por padrão */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
 
-    /* Estilo dos itens no menu dropdown */
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
+  /* Estilo dos itens no menu dropdown */
+  nav ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
 
-    /* Exibe o botão hambúrguer */
-    .menu-toggle {
-        display: block;
-    }
+  /* Exibe o botão hambúrguer */
+  .menu-toggle {
+    display: block;
+  }
 
-    /* Exibe o menu quando ativo */
-    nav.active ul {
-        display: flex;
-    }
+  /* Exibe o menu quando ativo */
+  nav.active ul {
+    display: flex;
+  }
 }
 
+/* Estilos para os botões de Login e Cadastro */
+nav ul li a.btn-login,
+nav ul li a.btn-cadastro {
+  background-color: #c39ea4; /* Rosa claro suave */
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
-iframe { 
-    width: 60%;  /* Ou qualquer valor que você achar adequado */
-    height: 300px; /* Ajuste conforme necessário */
-    display: block; /* Faz com que o iframe seja tratado como um bloco */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    border: none; /* Remover borda se necessário */
+nav ul li a.btn-login:hover,
+nav ul li a.btn-cadastro:hover {
+  background-color: #7c3637; /* Vermelho vinho */
+  transform: scale(1.05);
+}
+
+/* Para manter a aparência uniforme */
+nav ul li a.btn-login {
+  margin-left: 15px; /* Distância para o botão de cadastro */
+}
+
+nav ul li a.btn-cadastro {
+  margin-left: 15px;
+}
+
+iframe {
+  width: 60%; /* Ou qualquer valor que você achar adequado */
+  height: 300px; /* Ajuste conforme necessário */
+  display: block; /* Faz com que o iframe seja tratado como um bloco */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  border: none; /* Remover borda se necessário */
+}
+
+/* Estilo do Rodapé */
+footer {
+  background-color: var(--color-primary); /* Vermelho vinho */
+  color: white;
+  padding: 20px 20px; /* Diminui o padding para reduzir a altura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 250px; /* Diminuí a altura mínima do rodapé */
+}
+
+footer h5,
+footer h4 {
+  margin: 5px 0; /* Menor margem entre os títulos */
+  font-family: "Playfair Display", serif;
+}
+
+footer ul {
+  list-style: none;
+  margin: 5px 0; /* Menor margem */
+  padding: 0;
+  text-align: center;
+}
+
+footer ul li {
+  margin: 3px 0; /* Menor margem entre os itens da lista */
+}
+
+footer ul li p {
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem; /* Reduzido o tamanho da fonte */
+}
+
+footer .contact-label {
+  font-weight: bold;
+}
+
+footer #contatos h2 {
+  margin-top: 10px; /* Menor margem */
+  font-family: "Dancing Script", cursive;
+  font-size: 1.4rem; /* Um pouco menor */
+}
+
+footer #contatos ul {
+  padding: 0;
+}
+
+footer #contatos li {
+  margin: 8px 0; /* Menor margem entre os itens */
+}
+
+footer #contatos li a {
+  color: #c39ea4; /* Cor de destaque do link */
+  text-decoration: none;
+}
+
+footer #contatos li a:hover {
+  color: #fff; /* Cor do link quando hover */
+}
+
+footer #contatos i {
+  font-size: 1.3rem; /* Aumenta o tamanho do ícone */
+  margin-right: 10px;
+}
+
+/* Estilo da linha horizontal */
+footer hr.footer-divider {
+  width: 80%; /* Largura da linha */
+  border: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.3); /* Linha branca com transparência */
+  margin: 15px 0; /* Menor espaçamento acima e abaixo da linha */
+}
+
+/* Para melhorar a aparência dos ícones sociais */
+footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
