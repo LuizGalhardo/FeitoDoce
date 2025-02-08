@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Administrador - Feito Doce</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cadastro-container">
+      <!-- Logotipo -->
+      <div class="logo-container">
+        <img src="imagens/logo.jpg" alt="Logo Feito Doce" class="logo" />
+      </div>
+
+      <h2>Cadastrar Usuário</h2>
+
+      <!-- Formulário de Cadastro-->
+      <form id="userForm">
+        <div class="input-group">
+          <label for="username">Nome do Usuário:</label>
+          <input type="text" id="username" required />
+        </div>
+        <div class="input-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="button-group">
+          <button type="submit" class="btn">Cadastrar</button>
+          <button type="button" id="clearFields" class="btn">
+            Limpar Campos
+          </button>
+        </div>
+      </form>
+
+      <!-- Campo de Pesquisa -->
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Pesquisar usuário" />
+      </div>
+
+      <!-- Usuários -->
+      <ul id="userList"></ul>
+      <button id="clearAll" class="btn">Excluir Todos</button>
+    </div>
+
+    <script src="script/admin.js"></script>
+  </body>
+</html>
